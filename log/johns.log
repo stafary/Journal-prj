@@ -1,0 +1,3 @@
+LOG : Thu, 24 Nov 2016 20:38:44 parsing---- https://www.press.jhu.edu/journals/african_american_review/
+LOG : Thu, 24 Nov 2016 20:38:46 url: https://www.press.jhu.edu/journals/african_american_review/ WA ****check your func parse_one
+LOG : Thu, 24 Nov 2016 20:38:46 TypeError("object of type 'NoneType' has no len()",)
