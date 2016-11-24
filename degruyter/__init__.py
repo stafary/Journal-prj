@@ -1,0 +1,2 @@
+class degruyter(object):
+    pass

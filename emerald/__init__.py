@@ -1,0 +1,2 @@
+class emerald(object):
+    pass

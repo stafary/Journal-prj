@@ -1,0 +1,2 @@
+class cambridge(object):
+    pass

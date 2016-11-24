@@ -1,0 +1,3 @@
+class mit(object):
+    pass
+

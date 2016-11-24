@@ -1,0 +1,2 @@
+class johns(object):
+    pass

@@ -1,0 +1,2 @@
+class california(object):
+    pass

@@ -1,0 +1,2 @@
+class annual(object):
+    pass

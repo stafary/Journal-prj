@@ -1,0 +1,28 @@
+http://booksandjournals.brillonline.com/content/journals/1569206x;jsessionid=2d96gdr96jold.x-brill-live-03
+
+
+
+
+本次数据评估由圆鹏完成，只简单的交流了一下
+评估背景：world scientific 是百度学术的资源提供商，对方提供给我们的book章节的xml还有journal的xml， 但格式与我们的xml格式不同。本次world scientific 提供的xml解析工作由我完成。我发送的送评数据包括book与journal两部分。Book评估数据中每一章节都有有书名（booktitle）,作者（author）,书的章节名（title）， url, 唯一标识（doi）， 页码（pageno）， 摘要（abstract）.
+Journal评估数据中每一个论文 都有
+Title – 论文名  url   author-作者  journal-期刊名  keyword-关键字 issn eissn year-年 volume-卷号 issue- 期号 publisher-出版商 pageno-页码 time-发布时间 abstract-摘要
+目标： url页面中的信息与我解析得到的信息一致
+
+发件人: Zhang,Xiaojing(SMD) 
+发送时间: 2016年11月10日 11:48
+收件人: V_,Mahuanhuan; V_,Wangyuanpeng
+抄送: Jie,Yi; Zhang,Xian(SMD)
+主题: 答复: worldscientific journal还有worldscientific book 评估数据各300条
+
+请问这是送评邮件吗？
+如果是，评估背景、目标是什么？
+建议跟指导人沟通下送评邮件的格式哈~
+
+发件人: V_,Mahuanhuan 
+发送时间: 2016年11月10日 11:02
+收件人: V_,Wangyuanpeng
+抄送: Jie,Yi; Zhang,Xian(SMD); Zhang,Xiaojing(SMD)
+主题: worldscientific journal还有worldscientific book 评估数据各300条
+
+多个作者用;隔开

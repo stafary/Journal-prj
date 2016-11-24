@@ -1,0 +1,2 @@
+class brill(object):
+    pass
