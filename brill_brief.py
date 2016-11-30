@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import ParseBrief
 import re
 from bs4 import BeautifulSoup
@@ -15,10 +16,7 @@ class Brill(ParseBrief.ParseBrief):
 
     def parse_one(self, url):
         res = ''
-        try:
-            re2 = self.request_(url, 70)
-        except:
-            return ''
+        re2 = self.request_(url, 70)
         soup = BeautifulSoup(re2, "lxml")
         title_tag = soup.find('div', {'id':'itemTitle'})
         if title_tag is None:

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import ParseBrief
 import re
 from bs4 import BeautifulSoup
@@ -35,7 +36,7 @@ class Johns(ParseBrief.ParseBrief):
         issn = ''
         if issn_tag is not None:
             tmp = issn_tag.text.encode('utf8')
-            m = re.search(r'Print ISSN:\s*([\w\W\d]*-[\d\w\W]*?)Online', tmp)
+            m = re.search(r'Print ISSN:\s*(\w{4,4}\s*-\s*\w{4,4})Online', tmp)
             if m is not None:
                 issn = m.group(1)
         res += (issn.strip() + '\t')

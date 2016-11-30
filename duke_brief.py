@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import ParseBrief
 import re
 from bs4 import BeautifulSoup
@@ -14,7 +15,7 @@ class Duke(ParseBrief.ParseBrief):
         super(Duke, self).__init__(site)
 
     def parse_brief_url(self, url):
-        re2 = self.request_(url, 200)
+        re2 = self.request_(url, 70)
         ok = False
         if not re2:
             raise Exception('page loss---url:%s' % url)
@@ -27,9 +28,6 @@ class Duke(ParseBrief.ParseBrief):
     def parse_one(self, url):
         res = ''
         re2 = self.request_(url, 200)
-        if re2 == '':
-            raise Exception('page loss!! url: %s' % url)
-            return ''
         soup = BeautifulSoup(re2, "lxml")
         title_tag = soup.find('div', {'id':'p7tpc1_1'})
         if title_tag is None:
@@ -38,7 +36,7 @@ class Duke(ParseBrief.ParseBrief):
     #    assert title_tag, '%s has no title!!!' % url
         title_ul = title_tag.find('ul', {'class':'tablistA'})
         res += (title_ul.li.h2.text.encode('utf8').strip() + '\t')   
-        res += (url.strip() + '\t')
+        res += (self.link.strip() + '\t')
         m = re.match( r'(.*?[^/])/[^/].*',url)
         url_prefix = m.group(1)
         img_div_tag = soup.find('ul', {'class':'prodimage'})
@@ -53,7 +51,7 @@ class Duke(ParseBrief.ParseBrief):
         if issn_div is not None:
             issn_dl =issn_div.dl
             for child in issn_dl.children:
-                m = re.search(r'ISSN:</b>\s*([\d\w\W]*-[\d\w\W]*?)<', str(child))
+                m = re.search(r'ISSN:</b>\s*(\w{4,4}\s*-\s*\w{4,4})<', str(child))
                 if m is not None:
                     issn = m.group(1)
                     break
@@ -83,6 +81,7 @@ class Duke(ParseBrief.ParseBrief):
                 try:
                     journal = lst[0].strip()
                     url = lst[1].strip()
+                    self.link = url
                     url = self.parse_brief_url(url)
                     logging.debug('parsing %s' % url)
                     s = self.parse_one(url)
